@@ -5,14 +5,8 @@
         <link rel="stylesheet" type=text/css href="Style.css"/>
     </head>
     <body>
-        <div id="loggedin">
-            <p>
-                welcome,Roopak TJ
-                <img src="rpk.jpg" width=100 height=100 style="padding-right:10px" />
-            </p>
-            <p><a href="login.html">Logout</a></p>
-        </div>
-        <div id="options_page">
+        <jsp:include page="login_header.jsp" />
+        <div id="About_us">
             <h1>A group of highly skilled, enthusiastic,energetic and self motivated software developers collaborated from different multinational companies</h1>
             <p class="options">
                 <img src="Jaimon.jpg" style="width: 100%" />Jaimon TT 
@@ -25,10 +19,9 @@
             </p>            
         </div>  
         <div id="footer">
-            <p>
-                Silly Guys Productions Pvt. Ltd. Copyright Product <a href="About_us.html"><input type="button" name="aboutus" value="About Us"></a>
-                <p><a href="Login.html">Goto Previous page</a></p>
-            </p>
+            <p>Silly Guys Productions Pvt. Ltd. Copyright Product <a href="About_us.jsp"><input type="button" name="aboutus" value="About Us"></a></p>
+                <p><a href="index.jsp">Goto Previous page</a></p>
+        
         </div>
     </body>
 </html>
