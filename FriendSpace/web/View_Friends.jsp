@@ -35,7 +35,7 @@
     <div id="friend_details">
         <h1 style="padding-left:30px">Friend Details
         <img src="rpk.jpg" width=200 height=200 style="padding-right:10px" /></h1>
-        <form autocomplete="on">            
+        <form autocomplete="on" method="post" action="RemoveServlet">            
             <fieldset>
                 <legend>Personal Details</legend>
                 <table>
@@ -60,11 +60,9 @@
                         <td><%=db_category%></td>
                     </tr>
                 </table>
-            </fieldset>
-        </form>
+            </fieldset>       
         <p>  </p>
-        <form autocomplete="on">
-            <fieldset>
+             <fieldset>
                 <legend>Contact Details</legend>
                 <table>
                     <tr>
@@ -84,12 +82,14 @@
                         <td><%=db_description%></td>
                     </tr>
                 </table>
+                    <input type="hidden" name="friend_id" value="<%= db_friend_id %>">
             </fieldset>
-        </form>
-                <p>
+                     <p>
                     <a href="http://localhost:8080/FriendSpace/Edit_Profile.jsp?friend_id=<%=friend_id%>"><input type="button" name="edit" value=" Edit"></a>
-                    <a href="Options_page.jsp"><input type="button" name="remove" value="Remove" onclick="remove()" ></a>
+                    <input type="submit" name="remove" value="remove">
                 </p>
+        </form>
+               
                 <a href="Options_page.jsp">Goto Previous page</a>
                
     </div>
@@ -98,12 +98,6 @@
             Silly Guys Productions Pvt. Ltd. Copyright Product <a href="About_us.jsp"><input type="button" name="aboutus" value="About Us"></a>
         </p>
     </div>
-   <script>
-        function remove(){
-          <%String friend_remove = "delete from friend_details WHERE friend_id = '"+ db_friend_id +"';";
-                 stmt.executeUpdate(friend_remove);%>
-        }
-         <%}%>
-    </script>
+                    <%}%>
 </body>
 </html>

@@ -6,6 +6,7 @@
     </head>
     <body>
         <jsp:include page="login_header.jsp" />
+       
         <div id="friend_details">
             <h1 style="padding-left:30px">
                 Friend Details

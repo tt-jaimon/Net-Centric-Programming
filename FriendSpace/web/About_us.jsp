@@ -5,7 +5,7 @@
         <link rel="stylesheet" type=text/css href="Style.css"/>
     </head>
     <body>
-        <jsp:include page="login_header.jsp" />
+        <jsp:include page="AboutUs_login_header.jsp" />
         <div id="About_us">
             <h1>A group of highly skilled, enthusiastic,energetic and self motivated software developers collaborated from different multinational companies</h1>
             <p class="options">
